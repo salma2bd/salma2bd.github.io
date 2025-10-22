@@ -1,68 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Salma Abdullah bin Mazi | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Portfolio</title>
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="navbar">
-    <h1 class="logo">Salma Abdullah bin Mazi </h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section id="hero">
-    <div class="hero-content">
-      <h2>Hi, I'm <span class="accent">Your Name</span></h2>
-      <p>A Front-End Developer passionate about building responsive websites.</p>
-      <a href="#projects" class="btn">See My Work</a>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="left">
+      <a href="/">Personal Portfolio</a>
     </div>
-  </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write 2–3 lines about yourself here — what you study, your interests, and what kind of projects you love building.</p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Project 1</h3>
-        <p>Short description of your project.</p>
-        <a href="#" target="_blank">View Code</a>
-      </div>
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p>Another project description.</p>
-        <a href="#" target="_blank">View Code</a>
-      </div>
+    <div class="right">
+      <a href="https://www.linkedin.com/in/salma-abdullah/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Linkedin</span>
+      </a>
+      
+      <a href="mailto:salmaabdullah722@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a>
     </div>
-  </section>
+  </nav>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>You can reach me at <a href="salmaabdullah722@gmail.com">salmaabdullah722@gmail.com</a></p>
-  </section>
+  <main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section">
+      <div class="text">
+        <h2>Salma Abdullah bin Mazi</h2>
 
-  <footer>
-    <p>© Salma Abdullah bin Mazi. All rights reserved.</p>
-  </footer>
+        <!-- Typewriter subtitle (JS will type into this) -->
+        <p id="typing-text" class="typing"></p>
 
+        <div class="links">
+          <a href="#skills">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>
+          </a>
+          
+          <a href="#projects">
+            <i class="fa-solid fa-pen"></i>
+            <span>Projects</span>
+          </a>
+          
+          <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Skills -->
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="text">
+        Recent Electronics & Communication graduate transitioning into front-end development. Passionate about creating responsive, user-centric web interfaces using HTML, CSS, and Figma. Recognized for leading technical projects, managing teams, and delivering polished outputs. Combines analytical problem-solving from engineering with a creative eye for design.
+      </div>
+
+      <div class="cells">
+        <div class="cell">
+          <img src="images/html-logo.webp" alt="html logo">
+          <span>HTML</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/css-logo.webp" alt="css logo">
+          <span>CSS</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/javascript-logo.webp" alt="javascript logo">
+          <span>JavaScript</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/node-logo.webp" alt="python logo">
+          <span>Python</span>
+        </div>
+        
+        <div class="cell">
+          <img src="images/react-logo.webp" alt="cpp logo">
+          <span>C++</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Projects -->
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+      <div class="projects-list">
+        <a href="https://github.com/yourusername/project1" target="_blank">🌐 Personal Portfolio Website</a>
+        <a href="https://github.com/yourusername/project2" target="_blank">📊 Responsive Landing Page</a>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Contact -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <p class="contact-text">
+        Let’s connect! Feel free to reach out for collaborations, opportunities, or just a chat.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:salmaabdullah722@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/salma-abdullah/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- script (defer so DOM is available) -->
+  <script src="script.js" defer></script>
 </body>
 </html>
-
-
