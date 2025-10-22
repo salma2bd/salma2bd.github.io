@@ -1,10 +1,9 @@
 :root {
   --text-color: #1a1c20;
   --link-color: #4a76ee;
-  --background-color: #99ABFF;
+  --background-color: #eeeff1;
 }
 
-/* --- existing base --- */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* smooth scroll for anchor links */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,13 +32,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 0 50px;
   height: 80px;
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(4px);
-  z-index: 20;
 }
 
 nav .left a {
@@ -64,7 +59,7 @@ nav .right a span {
   margin-left: 5px;
 }
 
-/* HERO SECTION */
+/* SECTION 1: Hero */
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -73,7 +68,6 @@ nav .right a span {
   margin: 50px 0;
   margin-bottom: 100px;
   gap: 40px;
-  /* initial hidden state for reveal: handled by section rules below */
 }
 
 .hero-section .text {
@@ -82,7 +76,6 @@ nav .right a span {
 
 .hero-section .text h2 {
   font-size: 45px;
-  margin-bottom: 10px;
 }
 
 .hero-section .text .links {
@@ -104,23 +97,18 @@ nav .right a span {
   border: 2px solid var(--text-color);
 }
 
-/* Typewriter cursor styling */
-.typing::after {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 1.1em;
-  margin-left: 6px;
-  background: var(--text-color);
-  animation: blink 1s steps(2, start) infinite;
-  vertical-align: bottom;
+.hero-section .headshot {
+  flex: 2;
+  display: flex;
+  justify-content: right;
 }
 
-@keyframes blink {
-  50% { opacity: 0; }
+.hero-section .headshot img {
+  width: 350px;
+  border-radius: 50%;
 }
 
-/* SKILLS SECTION */
+/* SECTION 2: Skills */
 .skills-section {
   padding: 0 50px;
   margin-bottom: 100px;
@@ -147,6 +135,7 @@ nav .right a span {
   justify-content: center;
   align-items: center;
   gap: 10px;
+
   width: 200px;
   padding: 10px 20px;
   margin: 10px;
@@ -165,103 +154,177 @@ nav .right a span {
   font-size: 18px;
 }
 
-/* PROJECTS SECTION */
-.projects-section {
+/* SECTION 3: Testimony */
+.testimony-section {
   padding: 0 50px;
   margin-bottom: 100px;
-  text-align: center;
 }
 
-.projects-section h2 {
+.testimony-section h2 {
   font-size: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.projects-section .projects-list a {
-  display: block;
-  margin: 10px 0;
-  font-size: 18px;
-  transition: color 0.2s;
+.testimony-section .group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
-.projects-section .projects-list a:hover {
-  color: var(--text-color);
+.testimony-section .group .person-details {
+  text-align: center;
+  flex: 2;
 }
 
-/* CONTACT SECTION (Simplified) */
+.testimony-section .group .person-details img {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimony-section .group .person-details p {
+  font-weight: 600;
+}
+
+.testimony-section .group .person-details p:last-child {
+  font-weight: normal;
+}
+
+.testimony-section .group .text {
+  flex: 8;
+}
+
+/* SECTION 4: Contact */
 .contact-section {
   padding: 0 50px;
   margin-bottom: 100px;
-  text-align: center;
 }
 
 .contact-section h2 {
   font-size: 35px;
+}
+
+.contact-section .group {
+  display: flex;
+  gap: 50px;
+}
+
+.contact-section .group .text {
+  flex: 3;
+  margin-top: 20px;
+}
+
+.contact-section .group form {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid var(--link-color);
+  background-color: transparent;
+  padding: 10px;
   margin-bottom: 15px;
+  outline: none;
+  resize: none;
 }
 
-.contact-section .contact-text {
-  margin-bottom: 20px;
+.contact-section .group form button {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: var(--link-color);
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  transition: .1s;
 }
 
-.contact-section .contact-links a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 18px;
+.contact-section .group form button:hover {
+  filter: brightness(.9);
 }
 
-.contact-section .contact-links a:hover {
-  color: var(--text-color);
+@media (max-width: 850px) {
+  /* SECTION 1: Hero */
+  .hero-section .text h2 {
+    font-size: 35px;
+  }
 }
 
-/* ----------------------------
-   Reveal / Float-on-scroll styles
-   ---------------------------- */
-/* default hidden state for sections */
-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 600ms ease-out, transform 600ms ease-out;
-}
-
-/* when visible, it floats into place */
-section.reveal {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* responsive tweaks */
 @media (max-width: 740px) {
+  /* SECTION 1: Hero */
   .hero-section {
+    flex-direction: column-reverse;
+  }
+
+  .hero-section .headshot img {
+    width: 300px;
+  }
+
+  /* SECTION 3: Testimony */
+  .testimony-section {
+    text-align: center;
+  }
+
+  .testimony-section .group {
     flex-direction: column;
-    padding: 0 20px;
   }
 
-  .projects-grid, .projects-list {
-    width: 100%;
-  }
-
-  .skills-section {
-    padding: 0 20px;
-  }
-
-  .projects-section {
-    padding: 0 20px;
-  }
-
-  .contact-section {
-    padding: 0 20px;
+  /* SECTION 4: Contact */
+  .contact-section .group {
+    flex-direction: column;
   }
 }
 
-/* keep small-screen nav tidy */
 @media (max-width: 600px) {
+  /* NAVBAR */
   nav {
     padding: 0 20px;
+  }
+
+  nav .right a {
+    font-size: 22px;
+  }
+
+  nav .right a:last-child {
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 0;
   }
 
   nav .right a span {
     display: none;
   }
-}
 
+  /* SECTION 1: Hero */
+  .hero-section {
+    padding: 0 20px;
+  }
+
+  .hero-section .text h2 {
+    font-size: 30px;
+  }
+
+  /* SECTION 2: Skills */
+  .skills-section {
+    padding: 0 20px;
+  }
+
+  .skills-section .cells .cell span {
+    font-size: 16px;
+  }
+
+  /* SECTION 3: Testimony */
+  .testimony-section {
+    padding: 0 20px;
+  }
+
+  /* SECTION 4: Contact */
+  .contact-section {
+    padding: 0 20px;
+  }
+}
