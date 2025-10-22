@@ -1,7 +1,7 @@
 :root {
-  --text-color: #1a1c20;
-  --link-color: #4a76ee;
-  --background-color: #eeeff1;
+  --text-color: #393e48;
+  --link-color: #4287ff;
+  --background-color: #aefaf8;
 }
 
 * {
@@ -97,16 +97,6 @@ nav .right a span {
   border: 2px solid var(--text-color);
 }
 
-.hero-section .headshot {
-  flex: 2;
-  display: flex;
-  justify-content: right;
-}
-
-.hero-section .headshot img {
-  width: 350px;
-  border-radius: 50%;
-}
 
 /* SECTION 2: Skills */
 .skills-section {
